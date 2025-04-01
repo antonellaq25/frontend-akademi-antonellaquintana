@@ -1,4 +1,4 @@
-import { LOAD_PRODUCTS } from '../types/authTypes';
+import { LOAD_PRODUCTS } from '../types/prodTypes';
 
 const initialState = {
   products: {},
@@ -13,4 +13,4 @@ const productReducer = (state = initialState, action) => {
   }
 };
 
-export default authReducers;
+export default productReducer;
