@@ -1,0 +1,286 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "MacBook Pro 16\"",
+      "category": "Laptops",
+      "brand": "Apple",
+      "price": 2399.99,
+      "stock": 15,
+      "specifications": {
+        "processor": "Apple M2 Pro",
+        "memory": "16GB",
+        "storage": "512GB SSD",
+        "display": "16-inch Liquid Retina XDR",
+        "operatingSystem": "macOS"
+      },
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkF1rk8ZaUicJpQRdZYyUqlQs7w5YCP-ARRA&s"
+    },
+    {
+      "id": 2,
+      "name": "MacBook Air 16\"",
+      "category": "Laptops",
+      "brand": "Apple",
+      "price": 2399,
+      "stock": 10,
+      "specifications": {
+        "processor": "Apple M2 Air",
+        "memory": "16GB",
+        "storage": "512GB SSD",
+        "display": "16-inch Liquid Retina XDR",
+        "operatingSystem": "macOS"
+      },
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkF1rk8ZaUicJpQRdZYyUqlQs7w5YCP-ARRA&s"
+    },
+    {
+      "id": 3,
+      "name": "iPhone 15 Pro",
+      "category": "Smartphones",
+      "brand": "Apple",
+      "price": 999.99,
+      "stock": 30,
+      "specifications": {
+        "processor": "A17 Pro chip",
+        "memory": "8GB",
+        "storage": "256GB",
+        "display": "6.1-inch Super Retina XDR",
+        "operatingSystem": "iOS 17"
+      },
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIN3GSrTAm-5tvfWaytXwaiWzPPRWG3eVLfQ&s"
+    },
+    {
+      "id": 4,
+      "name": "iPhone 16 Pro Max",
+      "category": "Smartphones",
+      "brand": "Apple",
+      "price": 1500,
+      "stock": 35,
+      "specifications": {
+        "processor": "A17 Pro chip",
+        "memory": "8GB",
+        "storage": "256GB",
+        "display": "6.1-inch Super Retina XDR",
+        "operatingSystem": "iOS 17"
+      },
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIN3GSrTAm-5tvfWaytXwaiWzPPRWG3eVLfQ&s"
+    },
+    {
+      "id": 5,
+      "name": "Samsung Galaxy S24 Ultra",
+      "category": "Smartphones",
+      "brand": "Samsung",
+      "price": 1199.99,
+      "stock": 25,
+      "specifications": {
+        "processor": "Snapdragon 8 Gen 3",
+        "memory": "12GB",
+        "storage": "512GB",
+        "display": "6.8-inch Dynamic AMOLED 2X",
+        "operatingSystem": "Android 14"
+      },
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqo2REoaP_0_7omNxsqJFzdARR8JSGWT4ExQ&s"
+    },
+    {
+      "id": 6,
+      "name": "Samsung Galaxy S23 Ultra",
+      "category": "Smartphones",
+      "brand": "Samsung",
+      "price": 1100,
+      "stock": 25,
+      "specifications": {
+        "processor": "Snapdragon 8 Gen 3",
+        "memory": "12GB",
+        "storage": "512GB",
+        "display": "6.8-inch Dynamic AMOLED 2X",
+        "operatingSystem": "Android 14"
+      },
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqo2REoaP_0_7omNxsqJFzdARR8JSGWT4ExQ&s"
+    },
+    {
+      "id": 7,
+      "name": "Dell XPS 15",
+      "category": "Laptops",
+      "brand": "Dell",
+      "price": 1499.99,
+      "stock": 18,
+      "specifications": {
+        "processor": "Intel Core i7-13700H",
+        "memory": "16GB",
+        "storage": "1TB SSD",
+        "display": "15.6-inch 4K OLED",
+        "operatingSystem": "Windows 11"
+      },
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHmHbWyBJmrjzb0PagaCdpE2wkhDZ7kNijOA&s"
+    },
+    {
+      "id": 8,
+      "name": "Sony WH-1000XM5",
+      "category": "Headphones",
+      "brand": "Sony",
+      "price": 399.99,
+      "stock": 40,
+      "specifications": {
+        "type": "Over-ear",
+        "connectivity": "Bluetooth 5.2",
+        "batteryLife": "30 hours",
+        "noiseCancellation": "Yes",
+        "weight": "250g"
+      },
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHFCkVV26GZVAFvfhAlRDBpuYgcz-Vn2XkYA&s"
+    },
+    {
+      "id": 9,
+      "name": "Sony True Wireless",
+      "category": "Headphones",
+      "brand": "Sony",
+      "price": 300,
+      "stock": 20,
+      "specifications": {
+        "type": "Over-ear",
+        "connectivity": "Bluetooth 5.2",
+        "batteryLife": "30 hours",
+        "noiseCancellation": "Yes",
+        "weight": "250g"
+      },
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHFCkVV26GZVAFvfhAlRDBpuYgcz-Vn2XkYA&s"
+    },
+    {
+      "id": 10,
+      "name": "Sony Butterfly",
+      "category": "Headphones",
+      "brand": "Sony",
+      "price": 310,
+      "stock": 20,
+      "specifications": {
+        "type": "Over-ear",
+        "connectivity": "Bluetooth 5.2",
+        "batteryLife": "30 hours",
+        "noiseCancellation": "Yes",
+        "weight": "250g"
+      },
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHFCkVV26GZVAFvfhAlRDBpuYgcz-Vn2XkYA&s"
+    },
+    {
+      "id": 11,
+      "name": "iPad Air",
+      "category": "Tablets",
+      "brand": "Apple",
+      "price": 599.99,
+      "stock": 20,
+      "specifications": {
+        "processor": "Apple M1",
+        "memory": "8GB",
+        "storage": "256GB",
+        "display": "10.9-inch Liquid Retina",
+        "operatingSystem": "iPadOS"
+      },
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVtoDtwrreBSiAIII3Y4X6bsWk0yS_tvoGzQ&s"
+    },
+    {
+      "id": 12,
+      "name": "Samsung A7",
+      "category": "Tablets",
+      "brand": "Samsung",
+      "price": 599,
+      "stock": 20,
+      "specifications": {
+        "processor": "Octa-core",
+        "memory": "8GB",
+        "storage": "256GB",
+        "display": "10.9-inch Liquid Retina",
+        "operatingSystem": "iPadOS"
+      },
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6PT911BCbzOasXu6QrHqfpl7eXEMIeGTgOg&s"
+    },
+    {
+      "id": 13,
+      "name": "LG C2 OLED TV",
+      "category": "TVs",
+      "brand": "LG",
+      "price": 1299.99,
+      "stock": 10,
+      "specifications": {
+        "size": "65-inch",
+        "resolution": "4K",
+        "displayType": "OLED",
+        "refreshRate": "120Hz",
+        "smartFeatures": "webOS"
+      },
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlnPrY-EK_xfxNChFopTY3YPuTJBCHpm2-lA&s"
+    },
+    {
+      "id": 14,
+      "name": "LG C4 OLED TV",
+      "category": "TVs",
+      "brand": "LG",
+      "price": 1299.99,
+      "stock": 10,
+      "specifications": {
+        "size": "65-inch",
+        "resolution": "4K",
+        "displayType": "OLED",
+        "refreshRate": "120Hz",
+        "smartFeatures": "webOS"
+      },
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlnPrY-EK_xfxNChFopTY3YPuTJBCHpm2-lA&s"
+    },
+    {
+      "id": 15,
+      "name": "LG C6 OLED TV",
+      "category": "TVs",
+      "brand": "LG",
+      "price": 1299.99,
+      "stock": 10,
+      "specifications": {
+        "size": "65-inch",
+        "resolution": "4K",
+        "displayType": "OLED",
+        "refreshRate": "120Hz",
+        "smartFeatures": "webOS"
+      },
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlnPrY-EK_xfxNChFopTY3YPuTJBCHpm2-lA&s"
+    },
+    {
+      "id": 16,
+      "name": "Logitech MX Master 3S",
+      "category": "Accessories",
+      "brand": "Logitech",
+      "price": 99.99,
+      "stock": 50,
+      "specifications": {
+        "type": "Wireless Mouse",
+        "dpi": "8000",
+        "connectivity": "Bluetooth/USB",
+        "batteryLife": "70 days",
+        "buttons": "7"
+      },
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFzP5hEpu983v1ZOXD25yNFq_P_vS0ojmL1g&s"
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "Laptops"
+    },
+    {
+      "id": 2,
+      "name": "Smartphones"
+    },
+    {
+      "id": 3,
+      "name": "Tablets"
+    },
+    {
+      "id": 4,
+      "name": "TVs"
+    },
+    {
+      "id": 5,
+      "name": "Headphones"
+    },
+    {
+      "id": 6,
+      "name": "Accessories"
+    }
+  ]
+}
