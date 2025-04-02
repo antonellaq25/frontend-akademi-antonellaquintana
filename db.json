@@ -6,6 +6,7 @@
       "category": "Laptops",
       "brand": "Apple",
       "price": 2399.99,
+      "description":" A portable computer with a built-in screen, keyboard, and battery for work and entertainment.",
       "stock": 15,
       "specifications": {
         "processor": "Apple M2 Pro",
@@ -14,7 +15,7 @@
         "display": "16-inch Liquid Retina XDR",
         "operatingSystem": "macOS"
       },
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkF1rk8ZaUicJpQRdZYyUqlQs7w5YCP-ARRA&s"
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKwQygBaS3rjXsLFesAP7QyfksLUM4E8fkOg&s"
     },
     {
       "id": 2,
@@ -22,6 +23,7 @@
       "category": "Laptops",
       "brand": "Apple",
       "price": 2399,
+      "description":" A portable computer with a built-in screen, keyboard, and battery for work and entertainment.",
       "stock": 10,
       "specifications": {
         "processor": "Apple M2 Air",
@@ -38,6 +40,7 @@
       "category": "Smartphones",
       "brand": "Apple",
       "price": 999.99,
+      "description":" A handheld device that combines a mobile phone with a touchscreen, apps, and internet connectivity.",
       "stock": 30,
       "specifications": {
         "processor": "A17 Pro chip",
@@ -46,7 +49,7 @@
         "display": "6.1-inch Super Retina XDR",
         "operatingSystem": "iOS 17"
       },
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIN3GSrTAm-5tvfWaytXwaiWzPPRWG3eVLfQ&s"
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPZ0pIRPLD-vTk7FVTyu8Qrbepgrsc4idz-w&s"
     },
     {
       "id": 4,
@@ -54,6 +57,7 @@
       "category": "Smartphones",
       "brand": "Apple",
       "price": 1500,
+      "description":" A handheld device that combines a mobile phone with a touchscreen, apps, and internet connectivity.",
       "stock": 35,
       "specifications": {
         "processor": "A17 Pro chip",
@@ -70,6 +74,7 @@
       "category": "Smartphones",
       "brand": "Samsung",
       "price": 1199.99,
+      "description":" A handheld device that combines a mobile phone with a touchscreen, apps, and internet connectivity.",
       "stock": 25,
       "specifications": {
         "processor": "Snapdragon 8 Gen 3",
@@ -86,6 +91,7 @@
       "category": "Smartphones",
       "brand": "Samsung",
       "price": 1100,
+      "description":" A handheld device that combines a mobile phone with a touchscreen, apps, and internet connectivity.",
       "stock": 25,
       "specifications": {
         "processor": "Snapdragon 8 Gen 3",
@@ -94,7 +100,7 @@
         "display": "6.8-inch Dynamic AMOLED 2X",
         "operatingSystem": "Android 14"
       },
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqo2REoaP_0_7omNxsqJFzdARR8JSGWT4ExQ&s"
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSS5G3jtZjL2gFVxeeSxOFnObmUbGyeXclFpA&s"
     },
     {
       "id": 7,
@@ -102,6 +108,7 @@
       "category": "Laptops",
       "brand": "Dell",
       "price": 1499.99,
+      "description":" A portable computer with a built-in screen, keyboard, and battery for work and entertainment.",
       "stock": 18,
       "specifications": {
         "processor": "Intel Core i7-13700H",
@@ -118,6 +125,7 @@
       "category": "Headphones",
       "brand": "Sony",
       "price": 399.99,
+      "description":"Audio devices worn over or in the ears for immersive music, calls, and gaming experiences.",
       "stock": 40,
       "specifications": {
         "type": "Over-ear",
@@ -126,7 +134,7 @@
         "noiseCancellation": "Yes",
         "weight": "250g"
       },
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHFCkVV26GZVAFvfhAlRDBpuYgcz-Vn2XkYA&s"
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ62mj6mngmuy9OcJOKIYJYBBqs5yNdogLmEw&s"
     },
     {
       "id": 9,
@@ -134,6 +142,7 @@
       "category": "Headphones",
       "brand": "Sony",
       "price": 300,
+      "description":"Audio devices worn over or in the ears for immersive music, calls, and gaming experiences.",
       "stock": 20,
       "specifications": {
         "type": "Over-ear",
@@ -150,6 +159,7 @@
       "category": "Headphones",
       "brand": "Sony",
       "price": 310,
+      "description":"Audio devices worn over or in the ears for immersive music, calls, and gaming experiences.",
       "stock": 20,
       "specifications": {
         "type": "Over-ear",
@@ -158,7 +168,7 @@
         "noiseCancellation": "Yes",
         "weight": "250g"
       },
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHFCkVV26GZVAFvfhAlRDBpuYgcz-Vn2XkYA&s"
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0Ps3VWWXQ9blLhxScnTSo6P7r0RwQSSP7qQ&s"
     },
     {
       "id": 11,
@@ -167,6 +177,7 @@
       "brand": "Apple",
       "price": 599.99,
       "stock": 20,
+      "description":"A touchscreen device larger than a smartphone, ideal for reading, browsing, and media consumption.",
       "specifications": {
         "processor": "Apple M1",
         "memory": "8GB",
@@ -182,6 +193,7 @@
       "category": "Tablets",
       "brand": "Samsung",
       "price": 599,
+      "description":"A touchscreen device larger than a smartphone, ideal for reading, browsing, and media consumption.",
       "stock": 20,
       "specifications": {
         "processor": "Octa-core",
@@ -198,6 +210,7 @@
       "category": "TVs",
       "brand": "LG",
       "price": 1299.99,
+      "description":"A screen-based device for watching movies, shows, and live broadcasts, often with smart features.",
       "stock": 10,
       "specifications": {
         "size": "65-inch",
@@ -206,7 +219,7 @@
         "refreshRate": "120Hz",
         "smartFeatures": "webOS"
       },
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlnPrY-EK_xfxNChFopTY3YPuTJBCHpm2-lA&s"
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9DjmcCZHpFzaK2RIeMZJFr8twXC1x6P8HkQ&s"
     },
     {
       "id": 14,
@@ -214,6 +227,7 @@
       "category": "TVs",
       "brand": "LG",
       "price": 1299.99,
+      "description":"A screen-based device for watching movies, shows, and live broadcasts, often with smart features.",
       "stock": 10,
       "specifications": {
         "size": "65-inch",
@@ -222,7 +236,7 @@
         "refreshRate": "120Hz",
         "smartFeatures": "webOS"
       },
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlnPrY-EK_xfxNChFopTY3YPuTJBCHpm2-lA&s"
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTE17aYsxCDzeLZ7PKYlfVijQAfJvoViRgSNQ&s"
     },
     {
       "id": 15,
@@ -230,6 +244,7 @@
       "category": "TVs",
       "brand": "LG",
       "price": 1299.99,
+      "description":"A screen-based device for watching movies, shows, and live broadcasts, often with smart features.",
       "stock": 10,
       "specifications": {
         "size": "65-inch",
@@ -246,6 +261,7 @@
       "category": "Accessories",
       "brand": "Logitech",
       "price": 99.99,
+      "description":"A handheld input device that allows users to navigate and interact with a computer screen precisely.",
       "stock": 50,
       "specifications": {
         "type": "Wireless Mouse",

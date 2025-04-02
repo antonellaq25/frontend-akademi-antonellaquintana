@@ -1,10 +1,17 @@
-import { LOAD_PRODUCTS, GET_PRODUCTS} from '../types/prodTypes';
+import axios from 'axios';
+import { LOAD_PRODUCTS, GET_PRODUCTS, GET_PRODUCTS_ERROR} from '../types/prodTypes';
 
-export const loadProductAction = (productsData) => ({ 
-  type: LOAD_PRODUCTS , 
-  payload: productsData 
-});
 
-export const getProductAction = () => ({ 
-  type:  GET_PRODUCTS 
-});
+export const getProductAction = () => { 
+  return async (dispatch) => {
+    dispatch ({type: GET_PRODUCTS });
+
+    try {
+      const response = await axios.get('http://localhost:3001/products');
+      console.log(response.data);
+      dispatch ({type: LOAD_PRODUCTS , payload: response.data });
+    }catch (error) {
+      dispatch({type:GET_PRODUCTS_ERROR, payload:error.message})
+    }
+
+  }};

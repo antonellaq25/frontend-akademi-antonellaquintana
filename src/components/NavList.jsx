@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { loginAction, logoutAction } from "../store/actions/authActions";
 import { GoogleOAuthProvider, GoogleLogin, googleLogout } from "@react-oauth/google";
@@ -6,12 +6,15 @@ import { jwtDecode } from "jwt-decode";
 import { Link } from "react-router-dom";
 import { Button, Typography, Input } from "@material-tailwind/react";
 
+
 const GOOGLE_CLIENT_ID = import.meta.env.VITE_GOOGLE_CLIENT_ID;
 
 const NavList = () => {
-  console.log(GOOGLE_CLIENT_ID)
+ 
+  console.log(GOOGLE_CLIENT_ID);
   const dispatch = useDispatch();
-  const user = useSelector((state) => state.user);
+  const user = useSelector((state) => state.auth.user);
+
 
   const handleLoginSuccess = (credentialResponse) => {
     const decoded = jwtDecode(credentialResponse.credential);
@@ -50,32 +53,32 @@ const NavList = () => {
         </div>
         <Typography as="li" variant="small" color="blue-gray" className="p-1 font-medium">
           <Link to="/laptops" className="flex items-center hover:text-blue-500 transition-colors">
-          Laptops
+            Laptops
           </Link>
         </Typography>
         <Typography as="li" variant="small" color="blue-gray" className="p-1 font-medium">
           <Link to="/smartphones" className="flex items-center hover:text-blue-500 transition-colors">
-          Smartphones
+            Smartphones
           </Link>
         </Typography>
         <Typography as="li" variant="small" color="blue-gray" className="p-1 font-medium">
           <Link to="/tables" className="flex items-center hover:text-blue-500 transition-colors">
-          Tablets
+            Tablets
           </Link>
         </Typography>
         <Typography as="li" variant="small" color="blue-gray" className="p-1 font-medium">
           <Link to="/tvs" className="flex items-center hover:text-blue-500 transition-colors">
-          TV's
+            TV's
           </Link>
         </Typography>
         <Typography as="li" variant="small" color="blue-gray" className="p-1 font-medium">
           <Link to="/headphones" className="flex items-center hover:text-blue-500 transition-colors">
-          Headphones
+            Headphones
           </Link>
         </Typography>
         <Typography as="li" variant="small" color="blue-gray" className="p-1 font-medium">
           <Link to="/accessories" className="flex items-center hover:text-blue-500 transition-colors">
-          Accessories
+            Accessories
           </Link>
         </Typography>
 
