@@ -5,16 +5,25 @@ import { GoogleOAuthProvider, GoogleLogin, googleLogout } from "@react-oauth/goo
 import { jwtDecode } from "jwt-decode";
 import { Link } from "react-router-dom";
 import { Button, Typography, Input } from "@material-tailwind/react";
+import { getCategoryAction } from "../store/actions/categoryActions";
 
 
 const GOOGLE_CLIENT_ID = import.meta.env.VITE_GOOGLE_CLIENT_ID;
 
 const NavList = () => {
- 
+  const { categories = [], loading, error } = useSelector(state => state.category);
+  console.log("Categorias", categories);
   console.log(GOOGLE_CLIENT_ID);
   const dispatch = useDispatch();
   const user = useSelector((state) => state.auth.user);
 
+  useEffect(() => {
+    console.log("probando accion");
+    dispatch(getCategoryAction())
+  }, [dispatch]);
+
+  if (loading) return <p>Cargando productos</p>;
+  if (error) return <p>Error: {error}</p>
 
   const handleLoginSuccess = (credentialResponse) => {
     const decoded = jwtDecode(credentialResponse.credential);
@@ -51,36 +60,12 @@ const NavList = () => {
             Search
           </Button>
         </div>
-        <Typography as="li" variant="small" color="blue-gray" className="p-1 font-medium">
-          <Link to="/laptops" className="flex items-center hover:text-blue-500 transition-colors">
-            Laptops
-          </Link>
-        </Typography>
-        <Typography as="li" variant="small" color="blue-gray" className="p-1 font-medium">
-          <Link to="/smartphones" className="flex items-center hover:text-blue-500 transition-colors">
-            Smartphones
-          </Link>
-        </Typography>
-        <Typography as="li" variant="small" color="blue-gray" className="p-1 font-medium">
-          <Link to="/tables" className="flex items-center hover:text-blue-500 transition-colors">
-            Tablets
-          </Link>
-        </Typography>
-        <Typography as="li" variant="small" color="blue-gray" className="p-1 font-medium">
-          <Link to="/tvs" className="flex items-center hover:text-blue-500 transition-colors">
-            TV's
-          </Link>
-        </Typography>
-        <Typography as="li" variant="small" color="blue-gray" className="p-1 font-medium">
-          <Link to="/headphones" className="flex items-center hover:text-blue-500 transition-colors">
-            Headphones
-          </Link>
-        </Typography>
-        <Typography as="li" variant="small" color="blue-gray" className="p-1 font-medium">
-          <Link to="/accessories" className="flex items-center hover:text-blue-500 transition-colors">
-            Accessories
-          </Link>
-        </Typography>
+        {categories.map(category =>
+          <Typography as="li" variant="small" color="blue-gray" className="p-1 font-medium">
+            <Link to={`/${category.name.toLowerCase()}`} key={category.id} className="flex items-center hover:text-blue-500 transition-colors">
+              {category.name}
+            </Link>
+          </Typography>)}
 
         {user ? (
           <div className="flex items-center gap-4">
