@@ -5,7 +5,7 @@ import { Provider } from "react-redux";
 import store from "./store/store"; 
 import Home from './components/common/Home';
 import Header from './components/Header';
-
+import ProductDetail from './components/common/ProductDetail';
 
 function App() {
 
@@ -16,6 +16,8 @@ function App() {
     <Header />
     <Routes>
       <Route path="/" element={<Home/>}/>
+      <Route path="/:categoryName" element={<Home />}/>
+      <Route path="/product/:id" element={<ProductDetail/>}/>
       </Routes>
   </BrowserRouter>
    </Provider>
