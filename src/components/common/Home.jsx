@@ -41,10 +41,10 @@ const Home = () => {
 
   const indexOfLastProduct = currentPage * productsPerPage;
   const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
-  const currentProducts = products.slice(indexOfFirstProduct, indexOfLastProduct);
+  const currentProducts = filteredProducts.slice(indexOfFirstProduct, indexOfLastProduct);
 
   const nextPage = () => {
-    if (currentPage < Math.ceil(products.length / productsPerPage)) {
+    if (currentPage < Math.ceil(filteredProducts.length / productsPerPage)) {
       setCurrentPage(currentPage + 1)
     };
   };
