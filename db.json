@@ -2,12 +2,12 @@
   "products": [
     {
       "id": "1",
-      "name": "MacBook Pro 21\"",
+      "name": "MacBook Pro 16\"",
       "category": "Laptops",
       "brand": "Apple",
       "price": 2399.99,
       "description": " A portable computer with a built-in screen, keyboard, and battery for work and entertainment.",
-      "stock": "15",
+      "stock": "21",
       "specifications": {
         "processor": "Apple M2 Pro",
         "memory": "16GB",
@@ -22,7 +22,7 @@
       "name": "MacBook Air 20\"",
       "category": "Laptops",
       "brand": "Apple",
-      "price": 2399,
+      "price": "1500",
       "description": " A portable computer with a built-in screen, keyboard, and battery for work and entertainment.",
       "stock": "40",
       "specifications": {
@@ -41,7 +41,7 @@
       "brand": "Apple",
       "price": 999.99,
       "description": " A handheld device that combines a mobile phone with a touchscreen, apps, and internet connectivity.",
-      "stock": 30,
+      "stock": "35",
       "specifications": {
         "processor": "A17 Pro chip",
         "memory": "8GB",

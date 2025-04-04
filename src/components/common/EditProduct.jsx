@@ -2,12 +2,11 @@ import { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { updateProductAction } from "../../store/actions/prodActions";
-import { Alert, Button } from "@material-tailwind/react";
+import { Alert, Input, Button, Typography } from "@material-tailwind/react";
 import axios from "axios";
 
 const EditProduct = () => {
   const { id } = useParams();
-  const navigate = useNavigate();
   const dispatch = useDispatch();
   const { products } = useSelector(state => state.product);
   const product = products.find(p => p.id.toString() === id);
@@ -74,160 +73,154 @@ const EditProduct = () => {
     }
   };
   return (
-    <div>
-    <form onSubmit={handleSubmit} style={{ maxWidth: "400px", margin: "auto" }}>
-      <h2>Editar producto</h2>
+    <div className="relative py-10">
+      <form onSubmit={handleSubmit} className="max-w-md mx-auto p-6 bg-white rounded-xl shadow-md space-y-6">
+        <Typography variant="h4" color="blue-gray">
+          Editar producto
+        </Typography>
 
-      <input
-        name="name"
-        value={formData.name}
-        onChange={handleChange}
-        placeholder="Nombre"
-        required
-      />
-      <br />
+        <Input
+          label="Nombre"
+          name="name"
+          value={formData.name}
+          onChange={handleChange}
+          required
+        />
 
-      <input
-        name="description"
-        value={formData.description}
-        onChange={handleChange}
-        placeholder="Descripción"
-        required
-      />
-      <br />
+        <Input
+          label="Descripción"
+          name="description"
+          value={formData.description}
+          onChange={handleChange}
+          required
+        />
 
-      <input
-        name="price"
-        type="number"
-        value={formData.price}
-        onChange={handleChange}
-        placeholder="Precio"
-        required
-      />
-      <br />
+        <Input
+          label="Precio"
+          name="price"
+          type="number"
+          value={formData.price}
+          onChange={handleChange}
+          required
+        />
 
-      <input
-        name="stock"
-        type="number"
-        value={formData.stock}
-        onChange={handleChange}
-        placeholder="Stock"
-        required
-      />
-      <br />
+        <Input
+          label="Stock"
+          name="stock"
+          type="number"
+          value={formData.stock}
+          onChange={handleChange}
+          required
+        />
 
-      <input
-        name="brand"
-        value={formData.brand}
-        onChange={handleChange}
-        placeholder="Marca"
-      />
-      <br />
+        <Input
+          label="Marca"
+          name="brand"
+          value={formData.brand}
+          onChange={handleChange}
+        />
 
-      <input
-        name="category"
-        value={formData.category}
-        onChange={handleChange}
-        placeholder="Categoría"
-      />
-      <br />
+        <Input
+          label="Categoría"
+          name="category"
+          value={formData.category}
+          onChange={handleChange}
+        />
 
-      <input
-        name="image"
-        value={formData.image}
-        onChange={handleChange}
-        placeholder="URL de imagen"
-      />
-      <br />
+        <Input
+          label="URL de imagen"
+          name="image"
+          value={formData.image}
+          onChange={handleChange}
+        />
 
-      <h4>Especificaciones</h4>
+        <Typography variant="h6" className="pt-4">Especificaciones</Typography>
 
-      <input
-        name="processor"
-        value={formData.specifications?.processor || ""}
-        onChange={(e) =>
-          setFormData({
-            ...formData,
-            specifications: {
-              ...formData.specifications,
-              processor: e.target.value
-            }
-          })
-        }
-        placeholder="Procesador"
-      />
-      <br />
+        <Input
+          label="Procesador"
+          name="processor"
+          value={formData.specifications?.processor || ""}
+          onChange={(e) =>
+            setFormData({
+              ...formData,
+              specifications: {
+                ...formData.specifications,
+                processor: e.target.value
+              }
+            })
+          }
+        />
 
-      <input
-        name="memory"
-        value={formData.specifications?.memory || ""}
-        onChange={(e) =>
-          setFormData({
-            ...formData,
-            specifications: {
-              ...formData.specifications,
-              memory: e.target.value
-            }
-          })
-        }
-        placeholder="Memoria"
-      />
-      <br />
+        <Input
+          label="Memoria"
+          name="memory"
+          value={formData.specifications?.memory || ""}
+          onChange={(e) =>
+            setFormData({
+              ...formData,
+              specifications: {
+                ...formData.specifications,
+                memory: e.target.value
+              }
+            })
+          }
+        />
 
-      <input
-        name="storage"
-        value={formData.specifications?.storage || ""}
-        onChange={(e) =>
-          setFormData({
-            ...formData,
-            specifications: {
-              ...formData.specifications,
-              storage: e.target.value
-            }
-          })
-        }
-        placeholder="Almacenamiento"
-      />
-      <br />
+        <Input
+          label="Almacenamiento"
+          name="storage"
+          value={formData.specifications?.storage || ""}
+          onChange={(e) =>
+            setFormData({
+              ...formData,
+              specifications: {
+                ...formData.specifications,
+                storage: e.target.value
+              }
+            })
+          }
+        />
 
-      <input
-        name="display"
-        value={formData.specifications?.display || ""}
-        onChange={(e) =>
-          setFormData({
-            ...formData,
-            specifications: {
-              ...formData.specifications,
-              display: e.target.value
-            }
-          })
-        }
-        placeholder="Pantalla"
-      />
-      <br />
+        <Input
+          label="Pantalla"
+          name="display"
+          value={formData.specifications?.display || ""}
+          onChange={(e) =>
+            setFormData({
+              ...formData,
+              specifications: {
+                ...formData.specifications,
+                display: e.target.value
+              }
+            })
+          }
+        />
 
-      <input
-        name="operatingSystem"
-        value={formData.specifications?.operatingSystem || ""}
-        onChange={(e) =>
-          setFormData({
-            ...formData,
-            specifications: {
-              ...formData.specifications,
-              operatingSystem: e.target.value
-            }
-          })
-        }
-        placeholder="Sistema Operativo"
-      />
-      <br />
+        <Input
+          label="Sistema Operativo"
+          name="operatingSystem"
+          value={formData.specifications?.operatingSystem || ""}
+          onChange={(e) =>
+            setFormData({
+              ...formData,
+              specifications: {
+                ...formData.specifications,
+                operatingSystem: e.target.value
+              }
+            })
+          }
+        />
 
-      <button type="submit">Guardar</button>
-      <button type="button" onClick={handleReset} style={{ marginLeft: "10px" }}>
-        Deshacer cambios
-      </button>
-    </form>
-    <Alert
+        <div className="flex gap-4 pt-4">
+          <Button type="submit" color="blue">
+            Guardar
+          </Button>
+          <Button type="button" onClick={handleReset} color="gray">
+            Deshacer cambios
+          </Button>
+        </div>
+      </form>
+      <Alert
         className="absolute bottom-0 bg-green-800"
         open={open}
         onClose={() => setOpen(false)}
@@ -236,7 +229,7 @@ const EditProduct = () => {
           unmount: { y: 100 },
         }}
       >
-       Product updated
+        Product updated
       </Alert>
       <Alert
         className="absolute bottom-0 bg-green-800"
@@ -247,7 +240,7 @@ const EditProduct = () => {
           unmount: { y: 100 },
         }}
       >
-       Change reverted
+        Change reverted
       </Alert>
     </div>
   );
