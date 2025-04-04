@@ -213,10 +213,10 @@ const EditProduct = () => {
 
         <div className="flex gap-4 pt-4">
           <Button type="submit" color="blue">
-            Guardar
+            Save
           </Button>
           <Button type="button" onClick={handleReset} color="gray">
-            Deshacer cambios
+            Undo
           </Button>
         </div>
       </form>

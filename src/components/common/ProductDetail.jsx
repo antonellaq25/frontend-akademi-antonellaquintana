@@ -1,22 +1,41 @@
 import React from "react";
+import { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import { useSelector } from "react-redux";
-import { Typography, Card, CardBody, CardHeader, Button } from "@material-tailwind/react";
+import { useSelector, useDispatch } from "react-redux";
+import { deleteProductAction } from "../../store/actions/prodActions";
+import {
+  Typography,
+  Card,
+  CardBody,
+  CardHeader,
+  Button,
+  Dialog,
+  DialogHeader,
+  DialogBody,
+  DialogFooter
+} from "@material-tailwind/react";
 
 const ProductDetail = () => {
   const { id } = useParams();
   const navigate = useNavigate();
+  const dispatch = useDispatch();
   const { products } = useSelector(state => state.product);
   const product = products.find(p => p.id.toString() === id);
 
+  const [open, setOpen] = useState(false);
 
   if (!product) {
     return <p>Product not found</p>;
-  }
+  };
 
   const handleChange = () => {
     navigate(`/edit/${id}`)
-  }
+  };
+  const handleDelete = () => {
+    dispatch(deleteProductAction(product.id));
+    setOpen(false);
+    navigate("/");
+  };
 
   return (
     <div>
@@ -47,13 +66,32 @@ const ProductDetail = () => {
                   </li>
                 ))}
               </ul>
-              <Button onClick={handleChange} variant="small" color="black" className="p-2 font-medium">
-                Edit
-              </Button>
+              <div className="flex gap-4 pt-4">
+                <Button onClick={handleChange} variant="small" color="blue" className="p-2 font-medium">
+                  Edit
+                </Button>
+                <Button onClick={() => setOpen(true)} variant="small" color="black" className="p-2 font-medium">
+                  Delete
+                </Button>
+              </div>
             </div>
           </CardBody>
         </Card>
       </div>
+      <Dialog open={open} handler={() => setOpen(!open)}>
+        <DialogHeader>Confirme action</DialogHeader>
+        <DialogBody>
+          Are you sure you want to delete? Can't undo.
+        </DialogBody>
+        <DialogFooter>
+          <Button variant="text" color="gray" onClick={() => setOpen(false)} className="mr-2">
+            Cancel
+          </Button>
+          <Button variant="gradient" color="red" onClick={handleDelete}>
+            Delete
+          </Button>
+        </DialogFooter>
+      </Dialog>
     </div>
   )
 }

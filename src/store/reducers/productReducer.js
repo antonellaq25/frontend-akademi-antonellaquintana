@@ -4,6 +4,7 @@ import {
   GET_PRODUCTS_ERROR,
   UPDATE_PRODUCTS_ERROR,
   UPDATE_PRODUCTS,
+  DELETE_PRODUCTS,
 } from "../types/prodTypes";
 
 const initialState = {
@@ -34,6 +35,14 @@ const productReducer = (state = initialState, action) => {
     case UPDATE_PRODUCTS_ERROR:
       console.error("Error al cargar productos:", action.payload);
       return { ...state, loading: false, error: action.payload };
+    case DELETE_PRODUCTS:
+      return {
+        ...state,
+        products: state.products.filter(
+          (product) => product.id !== action.payload
+        ),
+      };
+
     default:
       return state;
   }

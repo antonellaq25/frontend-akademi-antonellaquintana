@@ -5,6 +5,7 @@ import {
   GET_PRODUCTS_ERROR,
   UPDATE_PRODUCTS,
   UPDATE_PRODUCTS_ERROR,
+  DELETE_PRODUCTS
 } from "../types/prodTypes";
 
 export const getProductAction = () => {
@@ -29,7 +30,20 @@ export const updateProductAction = (id, updatedData) => {
       );
       dispatch({ type: UPDATE_PRODUCTS, payload: response.data });
     } catch (error) {
-      dispatch({type: UPDATE_PRODUCTS_ERROR, payload: error.massage});
+      dispatch({type: UPDATE_PRODUCTS_ERROR, payload: error.message});
     }
   };
+};
+
+export const deleteProductAction = (id) => {
+  return async (dispatch) => {
+    try {
+      const response = await axios.delete(
+        `http://localhost:3001/products/${id}`
+      );
+      dispatch({ type: DELETE_PRODUCTS, payload: id });
+    } catch (error) {
+     console.log("Error deleting product", error.message)
+    }
+  }
 };
