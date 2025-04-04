@@ -1,16 +1,23 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
-import { Typography, Card, CardBody, CardHeader } from "@material-tailwind/react";
+import { Typography, Card, CardBody, CardHeader, Button } from "@material-tailwind/react";
 
 const ProductDetail = () => {
   const { id } = useParams();
+  const navigate = useNavigate();
   const { products } = useSelector(state => state.product);
   const product = products.find(p => p.id.toString() === id);
+
 
   if (!product) {
     return <p>Product not found</p>;
   }
+
+  const handleChange = () => {
+    navigate(`/edit/${id}`)
+  }
+
   return (
     <div>
       <div>
@@ -40,6 +47,9 @@ const ProductDetail = () => {
                   </li>
                 ))}
               </ul>
+              <Button onClick={handleChange} variant="small" color="black" className="p-2 font-medium">
+                Edit
+              </Button>
             </div>
           </CardBody>
         </Card>

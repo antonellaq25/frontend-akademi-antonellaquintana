@@ -6,6 +6,7 @@ import store from "./store/store";
 import Home from './components/common/Home';
 import Header from './components/Header';
 import ProductDetail from './components/common/ProductDetail';
+import EditProduct from './components/common/EditProduct';
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
       <Route path="/" element={<Home/>}/>
       <Route path="/:categoryName" element={<Home />}/>
       <Route path="/product/:id" element={<ProductDetail/>}/>
+      <Route path="/edit/:id" element={<EditProduct />} />
       </Routes>
   </BrowserRouter>
    </Provider>
