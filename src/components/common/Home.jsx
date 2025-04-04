@@ -12,7 +12,6 @@ import {
   CardFooter,
   Typography,
   Button,
-  IconButton,
 } from "@material-tailwind/react";
 
 const productsPerPage = 4;
@@ -102,8 +101,8 @@ const Home = () => {
         <Button onClick={prevPage} disabled={currentPage === 1}>
           Prev
         </Button>
-        <Typography variant="h6">Page {currentPage} of {Math.ceil(products.length / productsPerPage)}</Typography>
-        <Button onClick={nextPage} disabled={currentPage >= Math.ceil(products.length / productsPerPage)}>
+        <Typography variant="h6">Page {currentPage} of {Math.ceil(filteredProducts.length / productsPerPage)}</Typography>
+        <Button onClick={nextPage} disabled={currentPage >= Math.ceil(filteredProducts.length / productsPerPage)}>
           Next
         </Button>
       </div>
