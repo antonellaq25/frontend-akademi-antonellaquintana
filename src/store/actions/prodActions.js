@@ -5,7 +5,8 @@ import {
   GET_PRODUCTS_ERROR,
   UPDATE_PRODUCTS,
   UPDATE_PRODUCTS_ERROR,
-  DELETE_PRODUCTS
+  DELETE_PRODUCTS, 
+  ADD_PRODUCTS
 } from "../types/prodTypes";
 
 export const getProductAction = () => {
@@ -47,3 +48,14 @@ export const deleteProductAction = (id) => {
     }
   }
 };
+
+export const addProductsAction = (product) => {
+  return async (dispatch) => {
+    try {
+      const response = await axios.post("http://localhost:3001/products", product);
+      dispatch({type: ADD_PRODUCTS , payload:response.data});
+    }catch (error){
+      console.log("Error adding product ");
+    }
+  }
+}

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { updateProductAction } from "../../store/actions/prodActions";
 import { Alert, Input, Button, Typography } from "@material-tailwind/react";
@@ -8,8 +8,9 @@ import axios from "axios";
 const EditProduct = () => {
   const { id } = useParams();
   const dispatch = useDispatch();
-  const { products } = useSelector(state => state.product);
-  const product = products.find(p => p.id.toString() === id);
+  const { products } = useSelector((state) => state.product);
+  const product = products.find((p) => p.id.toString() === id);
+
   const [open, setOpen] = useState(false);
   const [revertedOpen, setRevertedOpen] = useState(false);
 
@@ -21,36 +22,24 @@ const EditProduct = () => {
     brand: "",
     image: "",
     category: "",
-    specifications: {
-      processor: "",
-      memory: "",
-      storage: "",
-      display: "",
-      operatingSystem: ""
-    }
+    specifications: [], 
   });
 
   const [initialData, setInitialData] = useState(product);
 
-
   useEffect(() => {
     if (product) {
-      setFormData({ ...product });
+      setFormData({ ...product, specifications: product.specifications || [] });
     } else {
-      axios.get(`http://localhost:3001/products/${id}`)
-        .then(res => {
+      axios
+        .get(`http://localhost:3001/products/${id}`)
+        .then((res) => {
           const product = res.data;
-          setFormData({ ...product });
+          setFormData({ ...product, specifications: product.specifications || [] });
         })
-        .catch(err => console.error("Error al obtener el producto", err));
+        .catch((err) => console.error("Error al obtener el producto", err));
     }
   }, [product, id]);
-
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-    setInitialData(initialData);
-
-  };
 
   const handleReset = () => {
     console.log("click on handle reset")
@@ -60,156 +49,70 @@ const EditProduct = () => {
       setRevertedOpen(true);
     }
   };
+  
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+  const handleSpecChange = (index, field, value) => {
+    const updatedSpecs = [...formData.specifications];
+    updatedSpecs[index][field] = value;
+    setFormData({ ...formData, specifications: updatedSpecs });
+  };
+
+  const addSpecification = () => {
+    setFormData({
+      ...formData,
+      specifications: [...formData.specifications, { key: "", value: "" }],
+    });
+  };
+
+  const removeSpecification = (index) => {
+    const updatedSpecs = formData.specifications.filter((_, i) => i !== index);
+    setFormData({ ...formData, specifications: updatedSpecs });
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    try {
-      console.log("ID a actualizar:", id);
-      console.log("Datos del producto:", formData);
-      dispatch(updateProductAction(id, formData));
-      setOpen(true);
-    } catch (error) {
-      console.error("Error al guardar los cambios:", error);
-    }
+    dispatch(updateProductAction(id, formData));
+    setOpen(true);
   };
+
   return (
     <div className="relative py-10">
       <form onSubmit={handleSubmit} className="max-w-md mx-auto p-6 bg-white rounded-xl shadow-md space-y-6">
         <Typography variant="h4" color="blue-gray">
-          Editar producto
+          Edit
         </Typography>
 
-        <Input
-          label="Nombre"
-          name="name"
-          value={formData.name}
-          onChange={handleChange}
-          required
-        />
+        <Input label="Name" name="name" value={formData.name} onChange={handleChange} required />
+        <Input label="Description" name="description" value={formData.description} onChange={handleChange} required />
+        <Input label="Price" name="price" type="number" value={formData.price} onChange={handleChange} required />
+        <Input label="Stock" name="stock" type="number" value={formData.stock} onChange={handleChange} min="0" required />
+        <Input label="Brand" name="brand" value={formData.brand} onChange={handleChange} />
+        <Input label="Category" name="category" value={formData.category} onChange={handleChange} />
+        <Input label="Image URL" name="image" value={formData.image} onChange={handleChange} />
+        <Typography variant="h6" className="pt-4">Specifications</Typography>
+        {formData.specifications.map((spec, index) => (
+          <div key={index} className="flex gap-2 items-center">
+            <Input
+              label="Specification name"
+              value={spec.key}
+              onChange={(e) => handleSpecChange(index, "key", e.target.value)}
+            />
+            <Input
+              label="Value"
+              value={spec.value}
+              onChange={(e) => handleSpecChange(index, "value", e.target.value)}
+            />
+            <Button color="red" size="sm" onClick={() => removeSpecification(index)}>
+              X
+            </Button>
+          </div>
+        ))}
 
-        <Input
-          label="Descripción"
-          name="description"
-          value={formData.description}
-          onChange={handleChange}
-          required
-        />
-
-        <Input
-          label="Precio"
-          name="price"
-          type="number"
-          value={formData.price}
-          onChange={handleChange}
-          required
-        />
-
-        <Input
-          label="Stock"
-          name="stock"
-          type="number"
-          value={formData.stock}
-          onChange={handleChange}
-          required
-        />
-
-        <Input
-          label="Marca"
-          name="brand"
-          value={formData.brand}
-          onChange={handleChange}
-        />
-
-        <Input
-          label="Categoría"
-          name="category"
-          value={formData.category}
-          onChange={handleChange}
-        />
-
-        <Input
-          label="URL de imagen"
-          name="image"
-          value={formData.image}
-          onChange={handleChange}
-        />
-
-        <Typography variant="h6" className="pt-4">Especificaciones</Typography>
-
-        <Input
-          label="Procesador"
-          name="processor"
-          value={formData.specifications?.processor || ""}
-          onChange={(e) =>
-            setFormData({
-              ...formData,
-              specifications: {
-                ...formData.specifications,
-                processor: e.target.value
-              }
-            })
-          }
-        />
-
-        <Input
-          label="Memoria"
-          name="memory"
-          value={formData.specifications?.memory || ""}
-          onChange={(e) =>
-            setFormData({
-              ...formData,
-              specifications: {
-                ...formData.specifications,
-                memory: e.target.value
-              }
-            })
-          }
-        />
-
-        <Input
-          label="Almacenamiento"
-          name="storage"
-          value={formData.specifications?.storage || ""}
-          onChange={(e) =>
-            setFormData({
-              ...formData,
-              specifications: {
-                ...formData.specifications,
-                storage: e.target.value
-              }
-            })
-          }
-        />
-
-        <Input
-          label="Pantalla"
-          name="display"
-          value={formData.specifications?.display || ""}
-          onChange={(e) =>
-            setFormData({
-              ...formData,
-              specifications: {
-                ...formData.specifications,
-                display: e.target.value
-              }
-            })
-          }
-        />
-
-        <Input
-          label="Sistema Operativo"
-          name="operatingSystem"
-          value={formData.specifications?.operatingSystem || ""}
-          onChange={(e) =>
-            setFormData({
-              ...formData,
-              specifications: {
-                ...formData.specifications,
-                operatingSystem: e.target.value
-              }
-            })
-          }
-        />
+        <Button color="blue" onClick={addSpecification}>
+          + Add specification
+        </Button>
 
         <div className="flex gap-4 pt-4">
           <Button type="submit" color="blue">
@@ -220,16 +123,9 @@ const EditProduct = () => {
           </Button>
         </div>
       </form>
-      <Alert
-        className="absolute bottom-0 bg-green-800"
-        open={open}
-        onClose={() => setOpen(false)}
-        animate={{
-          mount: { y: 0 },
-          unmount: { y: 100 },
-        }}
-      >
-        Product updated
+
+      <Alert className="absolute bottom-0 bg-green-800" open={open} onClose={() => setOpen(false)}>
+      Updated product
       </Alert>
       <Alert
         className="absolute bottom-0 bg-green-800"

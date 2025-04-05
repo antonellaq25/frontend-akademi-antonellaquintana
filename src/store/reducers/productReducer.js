@@ -5,6 +5,7 @@ import {
   UPDATE_PRODUCTS_ERROR,
   UPDATE_PRODUCTS,
   DELETE_PRODUCTS,
+  ADD_PRODUCTS,
 } from "../types/prodTypes";
 
 const initialState = {
@@ -42,7 +43,11 @@ const productReducer = (state = initialState, action) => {
           (product) => product.id !== action.payload
         ),
       };
-
+      case ADD_PRODUCTS:
+        return {
+          ...state,
+          products: [...state.products, action.payload],
+        };
     default:
       return state;
   }

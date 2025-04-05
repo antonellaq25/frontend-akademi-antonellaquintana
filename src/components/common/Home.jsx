@@ -79,7 +79,7 @@ const Home = () => {
       <div className="flex justify-end">
         <div className="px-6 pb-4  w-72">
           <Select
-            label="Ordenar por"
+            label="Sort by"
             value={sortOrder}
             onChange={(value) => setSortOrder(value)}>
 
@@ -129,6 +129,7 @@ const Home = () => {
         <Typography variant="h6">
           Page {currentPage} of {Math.ceil(filteredProducts.length / productsPerPage)}
         </Typography>
+        
         <Button onClick={nextPage} disabled={currentPage >= Math.ceil(filteredProducts.length / productsPerPage)}>Next</Button>
       </div>
     </div>

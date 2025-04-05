@@ -2,19 +2,34 @@
   "products": [
     {
       "id": "1",
-      "name": "MacBook Pro 17\"",
+      "name": "MacBook Pro 16\"",
       "category": "Laptops",
       "brand": "Apple",
       "price": 2399.99,
       "description": " A portable computer with a built-in screen, keyboard, and battery for work and entertainment.",
       "stock": "21",
-      "specifications": {
-        "processor": "Apple M2 Pro",
-        "memory": "16GB",
-        "storage": "512GB SSD",
-        "display": "16-inch Liquid Retina XDR",
-        "operatingSystem": "macOS"
-      },
+      "specifications": [
+        {
+          "key": "processor",
+          "value": "Apple M2 Pro"
+        },
+        {
+          "key": "memory",
+          "value": "16GB"
+        },
+        {
+          "key": "storage",
+          "value": "512GB SSD"
+        },
+        {
+          "key": "display",
+          "value": "16-inch Liquid Retina XDR"
+        },
+        {
+          "key": "operatingSystem",
+          "value": "macOS"
+        }
+      ],
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKwQygBaS3rjXsLFesAP7QyfksLUM4E8fkOg&s"
     },
     {
@@ -22,16 +37,31 @@
       "name": "MacBook Air 20\"",
       "category": "Laptops",
       "brand": "Apple",
-      "price": "1500",
+      "price": "1503",
       "description": " A portable computer with a built-in screen, keyboard, and battery for work and entertainment.",
-      "stock": "40",
-      "specifications": {
-        "processor": "Apple M2 Air",
-        "memory": "16GB",
-        "storage": "512GB SSD",
-        "display": "16-inch Liquid Retina XDR",
-        "operatingSystem": "macOS"
-      },
+      "stock": "1",
+      "specifications": [
+        {
+          "key": "processor",
+          "value": "Apple M2 Air"
+        },
+        {
+          "key": "memory",
+          "value": "16GB"
+        },
+        {
+          "key": "storage",
+          "value": "512GB SSD"
+        },
+        {
+          "key": "display",
+          "value": "16-inch Liquid Retina XDR"
+        },
+        {
+          "key": "operatingSystem",
+          "value": "macOS"
+        }
+      ],
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkF1rk8ZaUicJpQRdZYyUqlQs7w5YCP-ARRA&s"
     },
     {
@@ -42,13 +72,28 @@
       "price": 1500,
       "description": " A handheld device that combines a mobile phone with a touchscreen, apps, and internet connectivity.",
       "stock": 35,
-      "specifications": {
-        "processor": "A17 Pro chip",
-        "memory": "8GB",
-        "storage": "256GB",
-        "display": "6.1-inch Super Retina XDR",
-        "operatingSystem": "iOS 17"
-      },
+      "specifications": [
+        {
+          "key": "processor",
+          "value": "A17 Pro chip"
+        },
+        {
+          "key": "memory",
+          "value": "8GB"
+        },
+        {
+          "key": "storage",
+          "value": "256GB"
+        },
+        {
+          "key": "display",
+          "value": "6.1-inch Super Retina XDR"
+        },
+        {
+          "key": "operatingSystem",
+          "value": "iOS 17"
+        }
+      ],
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIN3GSrTAm-5tvfWaytXwaiWzPPRWG3eVLfQ&s"
     },
     {
@@ -59,13 +104,28 @@
       "price": 1100,
       "description": " A handheld device that combines a mobile phone with a touchscreen, apps, and internet connectivity.",
       "stock": 25,
-      "specifications": {
-        "processor": "Snapdragon 8 Gen 3",
-        "memory": "12GB",
-        "storage": "512GB",
-        "display": "6.8-inch Dynamic AMOLED 2X",
-        "operatingSystem": "Android 14"
-      },
+      "specifications": [
+        {
+          "key": "processor",
+          "value": "Snapdragon 8 Gen 3"
+        },
+        {
+          "key": "memory",
+          "value": "12GB"
+        },
+        {
+          "key": "storage",
+          "value": "512GB"
+        },
+        {
+          "key": "display",
+          "value": "6.8-inch Dynamic AMOLED 2X"
+        },
+        {
+          "key": "operatingSystem",
+          "value": "Android 14"
+        }
+      ],
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSS5G3jtZjL2gFVxeeSxOFnObmUbGyeXclFpA&s"
     },
     {
@@ -76,13 +136,28 @@
       "price": 399.99,
       "description": "Audio devices worn over or in the ears for immersive music, calls, and gaming experiences.",
       "stock": 40,
-      "specifications": {
-        "type": "Over-ear",
-        "connectivity": "Bluetooth 5.2",
-        "batteryLife": "30 hours",
-        "noiseCancellation": "Yes",
-        "weight": "250g"
-      },
+      "specifications": [
+        {
+          "key": "type",
+          "value": "Over-ear"
+        },
+        {
+          "key": "connectivity",
+          "value": "Bluetooth 5.2"
+        },
+        {
+          "key": "batteryLife",
+          "value": "30 hours"
+        },
+        {
+          "key": "noiseCancellation",
+          "value": "Yes"
+        },
+        {
+          "key": "weight",
+          "value": "250g"
+        }
+      ],
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ62mj6mngmuy9OcJOKIYJYBBqs5yNdogLmEw&s"
     },
     {
@@ -93,13 +168,28 @@
       "price": 300,
       "description": "Audio devices worn over or in the ears for immersive music, calls, and gaming experiences.",
       "stock": 20,
-      "specifications": {
-        "type": "Over-ear",
-        "connectivity": "Bluetooth 5.2",
-        "batteryLife": "30 hours",
-        "noiseCancellation": "Yes",
-        "weight": "250g"
-      },
+      "specifications": [
+        {
+          "key": "type",
+          "value": "Over-ear"
+        },
+        {
+          "key": "connectivity",
+          "value": "Bluetooth 5.2"
+        },
+        {
+          "key": "batteryLife",
+          "value": "30 hours"
+        },
+        {
+          "key": "noiseCancellation",
+          "value": "Yes"
+        },
+        {
+          "key": "weight",
+          "value": "250g"
+        }
+      ],
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHFCkVV26GZVAFvfhAlRDBpuYgcz-Vn2XkYA&s"
     },
     {
@@ -110,13 +200,28 @@
       "price": 310,
       "description": "Audio devices worn over or in the ears for immersive music, calls, and gaming experiences.",
       "stock": 20,
-      "specifications": {
-        "type": "Over-ear",
-        "connectivity": "Bluetooth 5.2",
-        "batteryLife": "30 hours",
-        "noiseCancellation": "Yes",
-        "weight": "250g"
-      },
+      "specifications": [
+        {
+          "key": "type",
+          "value": "Over-ear"
+        },
+        {
+          "key": "connectivity",
+          "value": "Bluetooth 5.2"
+        },
+        {
+          "key": "batteryLife",
+          "value": "30 hours"
+        },
+        {
+          "key": "noiseCancellation",
+          "value": "Yes"
+        },
+        {
+          "key": "weight",
+          "value": "250g"
+        }
+      ],
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0Ps3VWWXQ9blLhxScnTSo6P7r0RwQSSP7qQ&s"
     },
     {
@@ -127,13 +232,28 @@
       "price": 599.99,
       "stock": 20,
       "description": "A touchscreen device larger than a smartphone, ideal for reading, browsing, and media consumption.",
-      "specifications": {
-        "processor": "Apple M1",
-        "memory": "8GB",
-        "storage": "256GB",
-        "display": "10.9-inch Liquid Retina",
-        "operatingSystem": "iPadOS"
-      },
+      "specifications": [
+        {
+          "key": "processor",
+          "value": "Apple M1"
+        },
+        {
+          "key": "memory",
+          "value": "8GB"
+        },
+        {
+          "key": "storage",
+          "value": "256GB"
+        },
+        {
+          "key": "display",
+          "value": "10.9-inch Liquid Retina"
+        },
+        {
+          "key": "operatingSystem",
+          "value": "iPadOS"
+        }
+      ],
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVtoDtwrreBSiAIII3Y4X6bsWk0yS_tvoGzQ&s"
     },
     {
@@ -144,13 +264,28 @@
       "price": 599,
       "description": "A touchscreen device larger than a smartphone, ideal for reading, browsing, and media consumption.",
       "stock": 20,
-      "specifications": {
-        "processor": "Octa-core",
-        "memory": "8GB",
-        "storage": "256GB",
-        "display": "10.9-inch Liquid Retina",
-        "operatingSystem": "iPadOS"
-      },
+      "specifications": [
+        {
+          "key": "processor",
+          "value": "Octa-core"
+        },
+        {
+          "key": "memory",
+          "value": "8GB"
+        },
+        {
+          "key": "storage",
+          "value": "256GB"
+        },
+        {
+          "key": "display",
+          "value": "10.9-inch Liquid Retina"
+        },
+        {
+          "key": "operatingSystem",
+          "value": "iPadOS"
+        }
+      ],
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6PT911BCbzOasXu6QrHqfpl7eXEMIeGTgOg&s"
     },
     {
@@ -161,13 +296,28 @@
       "price": 1299.99,
       "description": "A screen-based device for watching movies, shows, and live broadcasts, often with smart features.",
       "stock": 10,
-      "specifications": {
-        "size": "65-inch",
-        "resolution": "4K",
-        "displayType": "OLED",
-        "refreshRate": "120Hz",
-        "smartFeatures": "webOS"
-      },
+      "specifications": [
+        {
+          "key": "size",
+          "value": "65-inch"
+        },
+        {
+          "key": "resolution",
+          "value": "4K"
+        },
+        {
+          "key": "displayType",
+          "value": "OLED"
+        },
+        {
+          "key": "refreshRate",
+          "value": "120Hz"
+        },
+        {
+          "key": "smartFeatures",
+          "value": "webOS"
+        }
+      ],
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9DjmcCZHpFzaK2RIeMZJFr8twXC1x6P8HkQ&s"
     },
     {
@@ -178,13 +328,28 @@
       "price": 1299.99,
       "description": "A screen-based device for watching movies, shows, and live broadcasts, often with smart features.",
       "stock": 10,
-      "specifications": {
-        "size": "65-inch",
-        "resolution": "4K",
-        "displayType": "OLED",
-        "refreshRate": "120Hz",
-        "smartFeatures": "webOS"
-      },
+      "specifications": [
+        {
+          "key": "size",
+          "value": "65-inch"
+        },
+        {
+          "key": "resolution",
+          "value": "4K"
+        },
+        {
+          "key": "displayType",
+          "value": "OLED"
+        },
+        {
+          "key": "refreshRate",
+          "value": "120Hz"
+        },
+        {
+          "key": "smartFeatures",
+          "value": "webOS"
+        }
+      ],
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTE17aYsxCDzeLZ7PKYlfVijQAfJvoViRgSNQ&s"
     },
     {
@@ -194,15 +359,130 @@
       "brand": "Logitech",
       "price": 99.99,
       "description": "A handheld input device that allows users to navigate and interact with a computer screen precisely.",
-      "stock": 50,
-      "specifications": {
-        "type": "Wireless Mouse",
-        "dpi": "8000",
-        "connectivity": "Bluetooth/USB",
-        "batteryLife": "70 days",
-        "buttons": "7"
-      },
+      "stock": "-2",
+      "specifications": [
+        {
+          "key": "type",
+          "value": "Wireless Mouse"
+        },
+        {
+          "key": "dpi",
+          "value": "8000"
+        },
+        {
+          "key": "connectivity",
+          "value": "Bluetooth/USB"
+        },
+        {
+          "key": "batteryLife",
+          "value": "70 days"
+        },
+        {
+          "key": "buttons",
+          "value": "7"
+        }
+      ],
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFzP5hEpu983v1ZOXD25yNFq_P_vS0ojmL1g&s"
+    },
+    {
+      "id": "1743816700592",
+      "name": "MacBook Air 20\"",
+      "category": "Laptops",
+      "brand": "Apple",
+      "price": 5,
+      "stock": 3,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKwQygBaS3rjXsLFesAP7QyfksLUM4E8fkOg&s",
+      "description": "admin2",
+      "specifications": [
+        {
+          "key": "processor",
+          "value": "m1"
+        }
+      ]
+    },
+    {
+      "id": "1743818693140",
+      "name": "Mouse Gamer Havit Ms1029 Rgb Black",
+      "category": "Accessories",
+      "brand": "Havit",
+      "price": 15,
+      "stock": 30,
+      "image": "https://http2.mlstatic.com/D_NQ_NP_2X_784725-MLU77348919215_062024-F.webp",
+      "description": "To work from home on your computer or make the most of your free time, you need comfort and freedom of movement. With your Havit MS1029, you'll find everything you're looking for in a single device with the best technology.",
+      "specifications": [
+        {
+          "key": "Wireless",
+          "value": "No"
+        },
+        {
+          "key": "Color",
+          "value": "black"
+        },
+        {
+          "key": "Model",
+          "value": "MS1029"
+        }
+      ]
+    },
+    {
+      "id": "1743819223945",
+      "name": "Airpods 3",
+      "category": "Accessories",
+      "brand": "Apple",
+      "price": 250,
+      "stock": 30,
+      "image": "https://http2.mlstatic.com/D_NQ_NP_2X_919371-MLA48697047530_122021-F.webp",
+      "description": "Live the full airpods expericience",
+      "specifications": [
+        {
+          "key": "Wireless",
+          "value": "Yes"
+        },
+        {
+          "key": "Generation",
+          "value": "3rd"
+        },
+        {
+          "key": "Built-in mic",
+          "value": "Yes"
+        }
+      ]
+    },
+    {
+      "id": "1743819465804",
+      "name": "MacBook Air 20\"",
+      "category": "Laptops",
+      "brand": "Apple",
+      "price": 44,
+      "stock": 44,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKwQygBaS3rjXsLFesAP7QyfksLUM4E8fkOg&s",
+      "description": " A portable computer with a built-in screen, keyboard, and battery for work and entertainment.",
+      "specifications": [
+        {
+          "key": "Color",
+          "value": "gray"
+        }
+      ]
+    },
+    {
+      "id": "1743819691689",
+      "name": "Smart Android Tv",
+      "category": "TVs",
+      "brand": "Motorola",
+      "price": 500,
+      "stock": 30,
+      "image": "https://http2.mlstatic.com/D_NQ_NP_2X_669874-MLU79051057202_092024-F.webp",
+      "description": "Smart Android Tv Motorola 43 91MT4300 Full Hd",
+      "specifications": [
+        {
+          "key": "Smart",
+          "value": "Yes"
+        },
+        {
+          "key": "Display",
+          "value": "Led"
+        }
+      ]
     }
   ],
   "categories": [

@@ -66,6 +66,14 @@ const NavList = () => {
               {category.name}
             </Link>
           </Typography>)}
+          <Button color="blue" >
+          <Link
+            to="/add-product"
+            className="flex items-center hover:text-blue-500 transition-colors"
+          >
+            Add new product
+          </Link>
+        </Button>
 
         {user ? (
           <div className="flex items-center gap-4">
