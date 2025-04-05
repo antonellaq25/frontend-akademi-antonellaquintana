@@ -6,10 +6,12 @@ import {
   UPDATE_PRODUCTS,
   DELETE_PRODUCTS,
   ADD_PRODUCTS,
+  ADD_FILTERED_PRODUCTS,
 } from "../types/prodTypes";
 
 const initialState = {
   products: [],
+  filteredProductsFromState: [],
   loading: false,
   error: null,
 };
@@ -21,7 +23,7 @@ const productReducer = (state = initialState, action) => {
     case GET_PRODUCTS:
       return { ...state, loading: true, error: null };
     case LOAD_PRODUCTS:
-      console.log("Productos cargados :", action.payload);
+      console.log("Productos cargados :", action.payload); 
       return { ...state, loading: false, products: action.payload };
     case GET_PRODUCTS_ERROR:
       console.error("Error al cargar productos:", action.payload);
@@ -43,11 +45,16 @@ const productReducer = (state = initialState, action) => {
           (product) => product.id !== action.payload
         ),
       };
-      case ADD_PRODUCTS:
-        return {
-          ...state,
-          products: [...state.products, action.payload],
-        };
+    case ADD_PRODUCTS:
+      return {
+        ...state,
+        products: [...state.products, action.payload],
+      };
+    case ADD_FILTERED_PRODUCTS:
+      return {
+        ...state,
+        filteredProductsFromState: action.payload,
+      };
     default:
       return state;
   }

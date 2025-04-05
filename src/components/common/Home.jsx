@@ -22,18 +22,24 @@ const Home = () => {
   const [sortOrder, setSortOrder] = useState("");
 
   const { products = [], loading, error } = useSelector(state => state.product);
+  const { filteredProductsFromState } = useSelector(state => state.product);
   const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(getProductAction());
   }, [dispatch]);
 
-  let filteredProducts = categoryName
-    ? products.filter(product =>
-      product.category.toLowerCase() === categoryName.toLowerCase()
-    )
-    : products;
+  let filteredProducts = [];
 
+  if (filteredProductsFromState?.length > 0) {
+    filteredProducts = filteredProductsFromState;
+  } else {
+    filteredProducts = categoryName
+      ? products.filter(product =>
+        product.category.toLowerCase() === categoryName.toLowerCase()
+      )
+      : products;
+  }
   const sortProducts = (products) => {
     switch (sortOrder) {
       case "name-asc":
@@ -48,7 +54,6 @@ const Home = () => {
         return products;
     }
   };
-
   const sortedProducts = sortProducts(filteredProducts);
 
   const indexOfLastProduct = currentPage * productsPerPage;
@@ -66,23 +71,19 @@ const Home = () => {
       setCurrentPage(currentPage - 1);
     }
   };
-
   return (
     <div>
-
       <h1 className="text-blue-gray-500 relative h-40 flex justify-center items-center text-center font-sans md:text-4xl lg:text-5xl">
         {categoryName
           ? `${categoryName.charAt(0).toUpperCase() + categoryName.slice(1)}`
           : "Find state of the art products"}
       </h1>
-
       <div className="flex justify-end">
         <div className="px-6 pb-4  w-72">
           <Select
             label="Sort by"
             value={sortOrder}
             onChange={(value) => setSortOrder(value)}>
-
             <Option value="">Featured</Option>
             <Option value="name-asc">Name (A-Z)</Option>
             <Option value="name-desc">Name (Z-A)</Option>
@@ -123,13 +124,12 @@ const Home = () => {
           ))}
         </div>
       )}
-
       <div className="flex justify-center mt-6 gap-4">
         <Button onClick={prevPage} disabled={currentPage === 1}>Prev</Button>
         <Typography variant="h6">
           Page {currentPage} of {Math.ceil(filteredProducts.length / productsPerPage)}
         </Typography>
-        
+
         <Button onClick={nextPage} disabled={currentPage >= Math.ceil(filteredProducts.length / productsPerPage)}>Next</Button>
       </div>
     </div>

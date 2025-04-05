@@ -6,7 +6,8 @@ import {
   UPDATE_PRODUCTS,
   UPDATE_PRODUCTS_ERROR,
   DELETE_PRODUCTS, 
-  ADD_PRODUCTS
+  ADD_PRODUCTS,
+  ADD_FILTERED_PRODUCTS
 } from "../types/prodTypes";
 
 export const getProductAction = () => {
@@ -54,6 +55,16 @@ export const addProductsAction = (product) => {
     try {
       const response = await axios.post("http://localhost:3001/products", product);
       dispatch({type: ADD_PRODUCTS , payload:response.data});
+    }catch (error){
+      console.log("Error adding product ");
+    }
+  }
+}
+
+export const addFilteredProductsAction = (filteredProducts) => {
+  return (dispatch) => {
+    try {
+      dispatch({type: ADD_FILTERED_PRODUCTS , payload:filteredProducts});
     }catch (error){
       console.log("Error adding product ");
     }

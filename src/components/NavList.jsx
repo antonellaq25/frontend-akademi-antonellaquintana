@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { loginAction, logoutAction } from "../store/actions/authActions";
 import { GoogleOAuthProvider, GoogleLogin, googleLogout } from "@react-oauth/google";
@@ -6,16 +6,20 @@ import { jwtDecode } from "jwt-decode";
 import { Link } from "react-router-dom";
 import { Button, Typography, Input } from "@material-tailwind/react";
 import { getCategoryAction } from "../store/actions/categoryActions";
+import {addFilteredProductsAction}  from "../store/actions/prodActions"
+
 
 
 const GOOGLE_CLIENT_ID = import.meta.env.VITE_GOOGLE_CLIENT_ID;
 
 const NavList = () => {
   const { categories = [], loading, error } = useSelector(state => state.category);
+  const { products } = useSelector(state => state.product);
   console.log("Categorias", categories);
   console.log(GOOGLE_CLIENT_ID);
   const dispatch = useDispatch();
   const user = useSelector((state) => state.auth.user);
+  const [filteredProducts, setFilteredProducts] = useState([]);
 
   useEffect(() => {
     console.log("probando accion");
@@ -25,6 +29,22 @@ const NavList = () => {
   if (loading) return <p>Cargando productos</p>;
   if (error) return <p>Error: {error}</p>
 
+  const handleChange = (e) => {
+    const value = e.target.value.toLowerCase();
+  
+    if (value === "") {
+      //setFilteredProducts([]);
+      //dispatch(addFilteredProductsAction([]));
+      return;
+    }
+  
+    const filtered = products.filter(product =>
+      product.name.toLowerCase().includes(value)
+    );
+  
+    setFilteredProducts(filtered);
+    dispatch(addFilteredProductsAction(filtered));
+  };
   const handleLoginSuccess = (credentialResponse) => {
     const decoded = jwtDecode(credentialResponse.credential);
     //google response
@@ -44,8 +64,9 @@ const NavList = () => {
       <ul className="my-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
         <div className="relative flex w-full gap-2 md:w-max">
           <Input
+            onChange={handleChange}
             type="search"
-            color="white"
+            color="black"
             label="Type here..."
             className="pr-20"
             containerProps={{

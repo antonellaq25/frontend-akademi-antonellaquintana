@@ -17,6 +17,7 @@ const AddProduct = () => {
   const [open, setOpen] = useState(false);
   const [errors, setErrors] = useState({});
   const dispatch = useDispatch();
+  
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
