@@ -7,7 +7,7 @@
       "brand": "Apple",
       "price": 2399.99,
       "description": " A portable computer with a built-in screen, keyboard, and battery for work and entertainment.",
-      "stock": "25",
+      "stock": "20",
       "specifications": [
         {
           "key": "processor",
@@ -39,7 +39,7 @@
       "brand": "Apple",
       "price": "1503",
       "description": " A portable computer with a built-in screen, keyboard, and battery for work and entertainment.",
-      "stock": "10",
+      "stock": "15",
       "specifications": [
         {
           "key": "processor",
