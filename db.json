@@ -7,7 +7,7 @@
       "brand": "Apple",
       "price": 2399.99,
       "description": " A portable computer with a built-in screen, keyboard, and battery for work and entertainment.",
-      "stock": "21",
+      "stock": "25",
       "specifications": [
         {
           "key": "processor",
@@ -34,12 +34,12 @@
     },
     {
       "id": "2",
-      "name": "MacBook Air 20\"",
+      "name": "MacBook Air 15\"",
       "category": "Laptops",
       "brand": "Apple",
       "price": "1503",
       "description": " A portable computer with a built-in screen, keyboard, and battery for work and entertainment.",
-      "stock": "1",
+      "stock": "10",
       "specifications": [
         {
           "key": "processor",
@@ -354,12 +354,12 @@
     },
     {
       "id": "17",
-      "name": "Logitech MX Master 3S",
+      "name": "Mouse Logitech MX Master 3S",
       "category": "Accessories",
       "brand": "Logitech",
       "price": 99.99,
       "description": "A handheld input device that allows users to navigate and interact with a computer screen precisely.",
-      "stock": "-2",
+      "stock": "10",
       "specifications": [
         {
           "key": "type",
@@ -386,13 +386,13 @@
     },
     {
       "id": "1743816700592",
-      "name": "MacBook Air 20\"",
+      "name": "MacBook Air 13\"",
       "category": "Laptops",
       "brand": "Apple",
-      "price": 5,
-      "stock": 3,
+      "price": "1800",
+      "stock": "13",
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKwQygBaS3rjXsLFesAP7QyfksLUM4E8fkOg&s",
-      "description": "admin2",
+      "description": "Apple MacBook Air (13 inches, 2020, Chip M1, 256 GB SSD, 8 GB  RAM) - Silver",
       "specifications": [
         {
           "key": "processor",
@@ -405,7 +405,7 @@
       "name": "Mouse Gamer Havit Ms1029 Rgb Black",
       "category": "Accessories",
       "brand": "Havit",
-      "price": 15,
+      "price": "25",
       "stock": 30,
       "image": "https://http2.mlstatic.com/D_NQ_NP_2X_784725-MLU77348919215_062024-F.webp",
       "description": "To work from home on your computer or make the most of your free time, you need comfort and freedom of movement. With your Havit MS1029, you'll find everything you're looking for in a single device with the best technology.",
@@ -450,17 +450,29 @@
     },
     {
       "id": "1743819465804",
-      "name": "MacBook Air 20\"",
+      "name": "MacBook Air 15\"",
       "category": "Laptops",
       "brand": "Apple",
-      "price": 44,
+      "price": "1850",
       "stock": 44,
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKwQygBaS3rjXsLFesAP7QyfksLUM4E8fkOg&s",
-      "description": " A portable computer with a built-in screen, keyboard, and battery for work and entertainment.",
+      "description": "MacBook Air 15-inch 15\" color space gray 8GB Ram - 256GB SSD - Apple Chip M3",
       "specifications": [
         {
           "key": "Color",
-          "value": "gray"
+          "value": "space gray"
+        },
+        {
+          "key": "RAM",
+          "value": "8GB"
+        },
+        {
+          "key": "Processor",
+          "value": "M3"
+        },
+        {
+          "key": "Display",
+          "value": "15 inch"
         }
       ]
     },
@@ -481,6 +493,30 @@
         {
           "key": "Display",
           "value": "Led"
+        }
+      ]
+    },
+    {
+      "id": "1744038988454",
+      "name": "Tablet Lenovo",
+      "category": "Tablets",
+      "brand": "Lenovo",
+      "price": 399,
+      "stock": 15,
+      "image": "https://http2.mlstatic.com/D_NQ_NP_2X_633368-MLA83185238769_032025-F.webp",
+      "description": "Tablet Lenovo Tab M11 4gb 128g Pen + Case + headphones E310 ",
+      "specifications": [
+        {
+          "key": "Color",
+          "value": "Gray"
+        },
+        {
+          "key": "Display",
+          "value": "11\""
+        },
+        {
+          "key": "Storage",
+          "value": "128GB"
         }
       ]
     }

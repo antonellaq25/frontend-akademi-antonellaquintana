@@ -74,19 +74,20 @@ const AddProduct = () => {
 
   return (
     <div className="max-w-3xl mx-auto p-6">
-      <Typography variant="h1" className="text-blue-gray-500 relative h-40 flex justify-center items-center text-center font-sans md:text-4xl lg:text-5xl">
+      <Typography className="text-blue-gray-500 relative h-40 flex justify-center items-center text-center font-sans md:text-4xl lg:text-5xl"
+      style={{ fontFamily: "'Open Sans', 'sans-serif'" }}>
         Add new product
       </Typography>
 
       <form onSubmit={handleSubmit} className="space-y-4">
         
         <div className="grid grid-cols-2 gap-4">
-          <Input label="Name" name="name" value={formData.name} onChange={handleChange} />
-          <Input label="Category" name="category" value={formData.category} onChange={handleChange} />
-          <Input label="Brand" name="brand" value={formData.brand} onChange={handleChange} />
-          <Input label="Price" name="price" type="number" value={formData.price} onChange={handleChange} />
-          <Input label="Stock" name="stock" type="number" value={formData.stock} onChange={handleChange} />
-          <Input label="Imagen (URL)" name="image" value={formData.image} onChange={handleChange} />
+          <Input label="Name" name="name" value={formData.name} onChange={handleChange} required/>
+          <Input label="Category" name="category" value={formData.category} onChange={handleChange} required/>
+          <Input label="Brand" name="brand" value={formData.brand} onChange={handleChange} required />
+          <Input label="Price" name="price" type="number" value={formData.price} onChange={handleChange} required/>
+          <Input label="Stock" name="stock" type="number" value={formData.stock} onChange={handleChange}  required/>
+          <Input label="Imagen (URL)" name="image" value={formData.image} onChange={handleChange} required/>
         </div>
 
         <Input label="Description" name="description" value={formData.description} onChange={handleChange} />

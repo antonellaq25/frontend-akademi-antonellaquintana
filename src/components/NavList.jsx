@@ -6,7 +6,7 @@ import { jwtDecode } from "jwt-decode";
 import { Link } from "react-router-dom";
 import { Button, Typography, Input } from "@material-tailwind/react";
 import { getCategoryAction } from "../store/actions/categoryActions";
-import {addFilteredProductsAction}  from "../store/actions/prodActions"
+import { addFilteredProductsAction } from "../store/actions/prodActions"
 
 
 
@@ -31,17 +31,17 @@ const NavList = () => {
 
   const handleChange = (e) => {
     const value = e.target.value.toLowerCase();
-  
+
     if (value === "") {
       //setFilteredProducts([]);
       //dispatch(addFilteredProductsAction([]));
       return;
     }
-  
+
     const filtered = products.filter(product =>
       product.name.toLowerCase().includes(value)
     );
-  
+
     setFilteredProducts(filtered);
     dispatch(addFilteredProductsAction(filtered));
   };
@@ -87,7 +87,7 @@ const NavList = () => {
               {category.name}
             </Link>
           </Typography>)}
-          <Button color="blue" >
+        <Button color="blue" >
           <Link
             to="/add-product"
             className="flex items-center hover:text-blue-500 transition-colors"
